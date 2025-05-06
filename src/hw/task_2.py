@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Self
-from logger import logger
+from hw.logger import logger
 
 
 class Book:

@@ -1,7 +1,7 @@
 from typing import Self
 from abc import ABC, abstractmethod
 
-from logger import logger
+from hw.logger import logger
 
 
 class Vehicle(ABC):
@@ -92,11 +92,17 @@ class Motorcycle(Vehicle):
         logger(f"{self.make} {self.model} ({self.region}): Мотор заведено")
 
 
-# Using
-factory1 = USVehicleFactory()
-vehicle1 = factory1.create_car("Toyota", "Corolla")
-vehicle1.start_engine()
+def main():
+    """Main function"""
+    factory1 = USVehicleFactory()
+    vehicle1 = factory1.create_car("Toyota", "Corolla")
+    vehicle1.start_engine()
 
-factory2 = EUVehicleFactory()
-vehicle2 = factory2.create_motorcycle("Harley-Davidson", "Sportster")
-vehicle2.start_engine()
+    factory2 = EUVehicleFactory()
+    vehicle2 = factory2.create_motorcycle("Harley-Davidson", "Sportster")
+    vehicle2.start_engine()
+
+
+# Using
+if __name__ == "__main__":
+    main()

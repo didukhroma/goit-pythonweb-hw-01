@@ -14,6 +14,9 @@ dependencies = [
 [tool.poetry]
 packages = [{include = "hw", from = "src"}]
 
+[tool.poetry.scripts]
+task1 = "hw.task_1:main"
+task2 = "hw.task_2:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
